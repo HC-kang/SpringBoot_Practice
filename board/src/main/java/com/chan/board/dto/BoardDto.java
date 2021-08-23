@@ -28,7 +28,7 @@ public class BoardDto {
     }
 
     @Builder
-    public BoardDto(Long id, String title, String content, String writer, LocalDateTime modifiedDate) {
+    public BoardDto(Long id, String title, String content, String writer, LocalDateTime createdDate, LocalDateTime modifiedDate) {
         this.id = id;
         this.writer = writer;
         this.title = title;
