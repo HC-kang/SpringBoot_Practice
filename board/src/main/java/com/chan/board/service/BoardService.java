@@ -1,8 +1,8 @@
 package com.chan.board.service;
 
 import com.chan.board.domain.entity.BoardEntity;
-import com.chan.board.domain.repository.BoardRepository;
 import com.chan.board.dto.BoardDto;
+import com.chan.board.domain.repository.BoardRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -34,7 +34,7 @@ public class BoardService {
 
         return boardDtoList;
     }
-    
+
     @Transactional
     public Long savePost(BoardDto boardDto) {
         return boardRepository.save(boardDto.toEntity()).getId();
