@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
+import javax.transaction.Transactional;
 
 @AllArgsConstructor
 @Service
@@ -34,7 +35,6 @@ public class BoardService {
 
         return boardDtoList;
     }
-
     @Transactional
     public Long savePost(BoardDto boardDto) {
         return boardRepository.save(boardDto.toEntity()).getId();
