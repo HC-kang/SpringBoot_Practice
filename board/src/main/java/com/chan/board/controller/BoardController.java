@@ -50,6 +50,7 @@ public class BoardController {
         return "board/update.html";
     }
 
+    //PutMapping, DeleteMapping 사용시에는 application.properties에 구문 추가해줘야 함!!
     @PutMapping("/post/edit/{no}")
     public String update(BoardDto boardDTO) {
         boardService.savePost(boardDTO);
